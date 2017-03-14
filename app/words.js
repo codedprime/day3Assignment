@@ -6,22 +6,22 @@ function words(input)
             myreplace = myreplace.replace(/\s\s+/g, ' ')
             var splitInput = myreplace.split(' ');    
             var objectVar = {};
-            var Data;
+            var data;
 
 
-            for ( Data in splitInput) {
+            for ( data in splitInput) {
                 var count = 1    
 
-                if (typeof objectVar[splitInput[Data]] === 'function'){       
-                    objectVar[splitInput[Data]] = count       
+                if (typeof objectVar[splitInput[data]] === 'function'){       
+                    objectVar[splitInput[data]] = count       
                   }  
 
-                  else if (splitInput[Data] in objectVar){      
-                    objectVar[splitInput[Data]] +=count      
+                  else if (splitInput[data] in objectVar){      
+                    objectVar[splitInput[data]] +=count      
                   }     
 
                   else{        
-                    objectVar[splitInput[Data]] = count  
+                    objectVar[splitInput[data]] = count  
                   }    
                 }
 
